@@ -6,6 +6,7 @@ import {
   Google_Sans_Code,
 } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import ThemeProvider from "@/components/ThemeProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,13 +37,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
+      suppressHydrationWarning
       lang="en"
       className={`${montserrat.variable} ${bitcountSingle.variable} ${googleSansCode.variable} h-full scroll-smooth antialiased `}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
+        <ThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
