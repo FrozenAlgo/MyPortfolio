@@ -1,4 +1,7 @@
 import ScrollFlipImage from "@/components/home/ScrollFlipImage";
+import RollingIcon from "@/components/ui/RollingIcon";
+import RollingTextButton from "@/components/ui/RollingTextButton";
+import { LucideEllipsis } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -44,37 +47,82 @@ export default function Home() {
         {/* SECTION 2: Next 100vh (Where the flipped card lands) */}
         <section className="min-h-screen flex items-center justify-between px-8 sm:px-16">
           <div className="max-w-sm">
-            <h2 className="font-sanscode text-2xl uppercase tracking-widest opacity-60">
+            <h2 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
               01 / Introduction
             </h2>
-            <p className="mt-3 text-2xl font-semibold">
-              Crafting fast, playful software with modern web &amp; AI stacks.
+            <h4 className="font-sanscode text-3xl tracking-wide">
+              Hi, I'm Muhammad Arham Rehan. <br /> Full-Stack Developer.
+            </h4>
+            <p className="my-4 text-xl font-light ">
+              Recent BSCS grad. I build full-stack products, ship client work,
+              and learn by making things that actually get used.
             </p>
+            <div className="">
+              <hr className="text-gray-300 my-4" />
+              <h6 className="font-semibold opacity-75 tracking-tight text-sm">
+                Currently at :
+              </h6>
+              <p className="font-bold text-xl my-2">
+                OFFSCRIPT Marketing Agency
+              </p>
+              <p className="font-semibold">Co-Founder </p>
+              <p>Islamabad , Pakistan</p>
+            </div>
           </div>
           <div className="max-w-sm text-right">
-            <p className="text-sm opacity-75">
-              Scroll further to explore interactive projects, puzzles, and my AI
-              assistant.
+            <p className="text-sm opacity-75 my-4">
+              Scroll further to explore ,my skills, interactive projects and my
+              work.
             </p>
+            <RollingTextButton
+              icon="ArrowDown"
+              className="shadow-md stroke-3 bg-white dark:bg-black text-black dark:text-white py-2 px-3 rounded-lg hover:bg-white hover:text-black"
+              btn_text="My Projects"
+            />
           </div>
         </section>
         {/* SECTION 3: Third 100vh (Card slides LEFT, content sits on the RIGHT) */}
         <section className="min-h-screen flex items-center justify-end px-8 sm:px-20">
           <div className="w-full md:w-1/2 space-y-4">
-            <span className="font-sanscode text-xs uppercase tracking-widest opacity-60">
+            <span className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
               02 / What I Do
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold">
               Turning ideas into interactive products.
             </h2>
+            <h4 className="font-semibold opacity-85">
+              I ship websites, internal tools, and personal systems.
+            </h4>
+            <ul className="text-sm sm:text-base opacity-80 leading-relaxed">
+              Most of my recent work lives in two places:
+              <li className="list-disc list-inside">
+                Client projects through OFFSCRIPT (Next.js sites)
+              </li>
+              <li className="list-disc list-inside">
+                Personal systems like Operation Liftoff (a mission-control style
+                goal tracker)
+              </li>
+            </ul>
             <p className="text-sm sm:text-base opacity-80 leading-relaxed">
-              Your right-side content goes here—tech stack highlights,
-              experience summary, or interactive badges aligned beside the card
-              on the left.
+              I started with PHP + MySQL in a real business environment, then
+              moved into modern React/Next.js. Still learning AI tooling —
+              deliberately, not as a marketing claim.
             </p>
           </div>
         </section>
       </ScrollFlipImage>
+      <section className="min-h-screen   px-8 sm:px-20">
+        <div className="flex justify-between items-center">
+          <div>
+            <span className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
+              03 / How I Do It
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-bold">Tech Stack.</h2>
+          </div>
+          {/* <h1 className="font-sanscode text-3xl tracking-wide">Tech Stack </h1> */}
+          <p>The tools behind my work.</p>
+        </div>
+      </section>
     </div>
   );
 }

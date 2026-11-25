@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion";
 
-export default function RollingIcon({ icon: Icon, className = "", onClick }) {
+export default function RollingIcon({
+  icon: Icon,
+  className = "",
+  onClick,
+  // btn_text,
+}) {
   return (
     <motion.button
       onClick={onClick}
@@ -11,6 +16,7 @@ export default function RollingIcon({ icon: Icon, className = "", onClick }) {
       whileTap={{ scale: 0.92 }}
       className={` relative overflow-hidden ${className}`}
     >
+      {/* {btn_text && <span>{btn_text}</span>} */}
       <motion.span
         variants={{
           rest: { y: "0%" },
