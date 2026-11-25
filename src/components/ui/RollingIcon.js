@@ -14,7 +14,7 @@ export default function RollingIcon({
       initial="rest"
       whileHover="hover"
       whileTap={{ scale: 0.92 }}
-      className={` relative overflow-hidden ${className}`}
+      className={` relative overflow-hidden cursor-pointer ${className}`}
     >
       {/* {btn_text && <span>{btn_text}</span>} */}
       <motion.span

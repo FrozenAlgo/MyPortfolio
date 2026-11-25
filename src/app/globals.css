@@ -13,4 +13,52 @@
   --font-sanscode: var(--font-sanscode);
 }
 
+@theme {
+  --animate-spin-every-5s: spin-every-5s 5s ease-in-out infinite;
+
+  @keyframes spin-every-5s {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+
+
+
+
+
+/* robot  */
+@keyframes walk-across {
+  0% {
+    left: 0%;
+    transform: translateX(0%) scaleX(1);
+  }
+  49.9% {
+    left: 100%;
+    transform: translateX(-100%) scaleX(1);
+  }
+  50% {
+    left: 100%;
+    transform: translateX(-100%) scaleX(-1);
+  }
+  99.9% {
+    left: 0%;
+    transform: translateX(0%) scaleX(-1);
+  }
+  100% {
+    left: 0%;
+    transform: translateX(0%) scaleX(1);
+  }
+}
+
+.animate-walk-across {
+  animation: walk-across 8s linear infinite;
+}
 
