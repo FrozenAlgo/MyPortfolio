@@ -15,8 +15,8 @@ export default function Header() {
   const isDark = mounted && resolvedTheme === "dark";
 
   return (
-    <header className="py-6">
-      <nav className="dark:bg-white bg-black w-max mx-auto text-white dark:text-black flex items-center justify-between min-w-2xs px-4 py-2 rounded-2xl">
+    <header className="py-6 fixed top-0 left-0 w-full flex justify-center z-50 pointer-events-none">
+      <nav className="pointer-events-auto dark:bg-white bg-black w-max mx-auto text-white dark:text-black flex items-center justify-between min-w-2xs px-4 py-2 rounded-2xl">
         <div className=" text-2xl font-bitcount font-semibold tracking-wider uppercase">
           Arham
         </div>
