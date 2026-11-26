@@ -202,6 +202,27 @@ export default function Home() {
         </div>
       </section>
       <section className="px-8 sm:px-20 py-20">
+        <div className="flex justify-between items-center">
+          <div>
+            <h2 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4 flex justify-between items-center border-b border-b-gray-200">
+              04 / Selected Work
+              <Image
+                src="/OrangeCatPeeping-ezgif.com-crop.gif"
+                width={40}
+                height={40}
+                // className="flex items-center w-10 h-10"
+                alt="cat peeping gif"
+              />
+            </h2>
+            <h2 className="text-3xl sm:text-5xl font-bold">
+              Things I actually shipped.
+            </h2>
+          </div>
+          <p>
+            Client work, internship stuff, and experiments. Click a folder if
+            you're curious.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {FOLDER_PROJECTS.map((project) => (
             <FolderPocket key={project.slug} project={project} />
