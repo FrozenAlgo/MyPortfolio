@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${montserrat.variable} ${bitcountSingle.variable} ${googleSansCode.variable} h-full scroll-smooth antialiased `}
     >
-      <body className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300 scroll-smooth antialiased">
         <ThemeProvider>
           <Header />
           <main>{children}</main>

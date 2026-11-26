@@ -1,7 +1,9 @@
 "use client";
 import ScrollFlipImage from "@/components/home/ScrollFlipImage";
+import FolderPocket from "@/components/ui/FolderPocket";
 import RollingIcon from "@/components/ui/RollingIcon";
 import RollingTextButton from "@/components/ui/RollingTextButton";
+import { FOLDER_PROJECTS } from "@/data/projectsList";
 import { TECH_STACK } from "@/data/techStack";
 import { Bot, LucideEllipsis } from "lucide-react";
 import Image from "next/image";
@@ -52,8 +54,15 @@ export default function Home() {
         {/* SECTION 2: Next 100vh (Where the flipped card lands) */}
         <section className="min-h-screen flex items-center justify-between px-8 sm:px-16">
           <div className="max-w-sm">
-            <h2 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
+            <h2 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4 flex justify-between items-center border-b border-b-gray-200">
               01 / Introduction
+              <Image
+                src="/OrangeCatPeeping-ezgif.com-crop.gif"
+                width={40}
+                height={40}
+                // className="flex items-center w-10 h-10"
+                alt="cat peeping gif"
+              />
             </h2>
             <h4 className=" text-3xl tracking-wide font-bold">
               Hi, I'm Muhammad Arham Rehan. <br /> Full-Stack Developer.
@@ -88,9 +97,17 @@ export default function Home() {
         {/* SECTION 3: Third 100vh (Card slides LEFT, content sits on the RIGHT) */}
         <section className="min-h-screen flex items-center justify-end px-8 sm:px-20">
           <div className="w-full md:w-1/2 space-y-4">
-            <span className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
+            <h4 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4 flex justify-between items-center border-b border-b-gray-200 me-8">
               02 / What I Do
-            </span>
+              <Image
+                src="/OrangeCatPeeping-ezgif.com-crop.gif"
+                width={40}
+                height={40}
+                // className="flex items-center w-10 h-10"
+                alt="cat peeping gif"
+              />
+            </h4>
+
             <h2 className="text-3xl sm:text-5xl font-bold">
               {/* Turning ideas into interactive products. */}I ship websites
               and break things until they work.
@@ -126,9 +143,16 @@ export default function Home() {
       <section className="min-h-screen   px-8 sm:px-20">
         <div className="flex justify-between items-center">
           <div>
-            <span className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4">
+            <h2 className="font-sanscode text-xl uppercase tracking-widest opacity-60 my-4 flex justify-between items-center border-b border-b-gray-200">
               03 / How I Do It
-            </span>
+              <Image
+                src="/OrangeCatPeeping-ezgif.com-crop.gif"
+                width={40}
+                height={40}
+                // className="flex items-center w-10 h-10"
+                alt="cat peeping gif"
+              />
+            </h2>
             <h2 className="text-3xl sm:text-5xl font-bold">Tech Stack.</h2>
           </div>
           {/* <h1 className="font-sanscode text-3xl tracking-wide">Tech Stack </h1> */}
@@ -174,6 +198,13 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+      <section className="px-8 sm:px-20 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {FOLDER_PROJECTS.map((project) => (
+            <FolderPocket key={project.slug} project={project} />
           ))}
         </div>
       </section>
