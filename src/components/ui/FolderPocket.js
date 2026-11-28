@@ -84,8 +84,9 @@ export default function FolderPocket({ project }) {
           className="relative z-20 -mt-12 h-38 sm:h-32 rounded-2xl rounded-tl-none bg-stone-100/10 dark:bg-zinc-900/80 backdrop-blur-md border border-stone-300/80 dark:border-zinc-700/80 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] p-5 flex items-end justify-between"
         >
           {/* Front Pocket Top-Left Tab with Document Icon (seen in your screenshot!) */}
-          <div className="absolute -top-3.5 -left-[1px] h-3.5 w-28 rounded-t-xl bg-stone-100/65 dark:bg-zinc-900/95 backdrop-blur-md border border-t border-x border-stone-300/80 dark:border-zinc-700/80 flex items-center pl-4">
+          <div className="absolute -top-4 -left-[1px] h-4 w-28 rounded-t-xl bg-stone-100/65 dark:bg-zinc-900/95 backdrop-blur-md border border-t border-x border-stone-300/80 dark:border-zinc-700/80 flex items-center pl-4 border-b-0">
             <FileText className="w-3 h-3 text-zinc-400" />
+            <span className="text-zinc-400 text-[9px] ms-1">Help yourself</span>
           </div>
 
           {/* Subtle right-side vertical fold shadow from your screenshot */}
